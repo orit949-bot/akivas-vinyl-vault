@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akiva's Vinyl Vault - In Loving Memory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Permanent+Marker&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="title">🎵 Akiva's Vinyl Vault 🎵</h1>
+        <p class="subtitle">In Loving Memory - Rock On Forever</p>
+    </header>
+
+    <div class="container">
+        <!-- Login Section -->
+        <div id="loginSection" class="login-section">
+            <div class="login-box">
+                <h2>Enter the Vault</h2>
+                <input type="text" id="username" placeholder="Username" class="input-field">
+                <input type="password" id="password" placeholder="Password" class="input-field">
+                <button id="loginBtn" class="btn btn-primary">Rock & Roll!</button>
+                <button id="helpBtn" class="btn btn-help">🔑 Login Info</button>
+            </div>
+        </div>
+
+        <!-- Main App -->
+        <div id="mainApp" class="main-app" style="display: none;">
+            <div class="controls">
+                <button id="scanBtn" class="btn btn-scan">📷 Scan Barcode</button>
+                <button id="manualBtn" class="btn btn-manual">✏️ Manual Entry</button>
+                <button id="exportBtn" class="btn btn-export">📊 Export to Excel</button>
+                <button id="logoutBtn" class="btn btn-logout">Logout</button>
+            </div>
+
+            <div class="catalog-section">
+                <h3>Your Collection</h3>
+                <div class="table-container">
+                    <table id="catalogTable" class="catalog-table">
+                        <thead>
+                            <tr>
+                                <th>Album Art</th>
+                                <th>Artist</th>
+                                <th>Album</th>
+                                <th>Year</th>
+                                <th>Genre</th>
+                                <th>Format</th>
+                                <th>Price</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="catalogBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manual Entry Modal -->
+    <div id="manualModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Add Album Manually</h3>
+            <form id="manualForm">
+                <input type="text" id="manualArtist" placeholder="Artist" class="input-field" required>
+                <input type="text" id="manualAlbum" placeholder="Album Title" class="input-field" required>
+                <input type="number" id="manualYear" placeholder="Year" class="input-field">
+                <input type="text" id="manualGenre" placeholder="Genre" class="input-field">
+                <select id="manualFormat" class="input-field">
+                    <option value="LP">LP (12")</option>
+                    <option value="EP">EP (7")</option>
+                    <option value="Single">Single</option>
+                    <option value="Box Set">Box Set</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Add to Collection</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close-help">&times;</span>
+            <h3>🎵 Login Details - Akiva's Vault 🎵</h3>
+            <div class="login-info">
+                <p><strong>Use any of these accounts:</strong></p>
+                <div class="account-info">
+                    <div class="account">👑 <strong>admin</strong> : akiva2024</div>
+                    <div class="account">🎸 <strong>collector1</strong> : vinyl2024</div>
+                    <div class="account">🎼 <strong>collector2</strong> : records2024</div>
+                    <div class="account">👥 <strong>guest</strong> : music2024</div>
+                    <div class="account">🤟 <strong>friend</strong> : rockstar2024</div>
+                </div>
+                <p class="note">💡 Everyone shares the same catalog - add your vinyl and see what others have added!</p>
+                <p class="memorial">🕊️ <em>In loving memory of Akiva - keeping the music alive</em></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
